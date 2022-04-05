@@ -59,7 +59,7 @@ class App extends Component{
   render(){
     const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     //THIS forecastItems COULD HAVE BEEN MOVED TO ITS OWN COMPONENT
-    const forecastItems = this.state.forecast.forecastday.slice(1).map(item =>
+    const forecastItems = this.state.forecast.forecastday.map(item =>
       <Col md="3" className="text-center" style={{zIndex: "40", borderRadius: "5px",backgroundColor: "rgba(0,0,0,0.3)", display: this.state.weatherWindow}}>
         <h4 className="text-white">{item.date}</h4>
         <img src={item.day.condition.icon} className="img-responsive" />
