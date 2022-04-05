@@ -61,7 +61,7 @@ class App extends Component{
     //THIS forecastItems COULD HAVE BEEN MOVED TO ITS OWN COMPONENT
     const forecastItems = this.state.forecast.forecastday.map(item =>
       <Col md="3" className="text-center" style={{zIndex: "40", borderRadius: "5px",backgroundColor: "rgba(0,0,0,0.3)", display: this.state.weatherWindow}}>
-        <h4 className="text-white">{weekday[new Date(item.date).getDay()]}</h4>
+        <h4 className="text-white">{item.date}</h4>
         <img src={item.day.condition.icon} className="img-responsive" />
         <h4 className="text-white">{item.day.condition.text}</h4>
         <h2 className="text-white">{Math.round(item.day.maxtemp_f)}&#8457;/{Math.round(item.day.mintemp_f)}&#8457;</h2>
