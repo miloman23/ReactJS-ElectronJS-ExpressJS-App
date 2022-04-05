@@ -4,7 +4,7 @@ const API_KEY = "bbf20eda4ec94a38ac905343220504";
 
 var router = express.Router();
 router.get("/:zipcode", function(req, res, next) {
-    https.get('https://api.weatherapi.com/v1/forecast.json?key='+API_KEY+'&q='+req.params.zipcode+'&days=3&aqi=no&alerts=no', (resp) => {
+    https.get('https://api.weatherapi.com/v1/forecast.json?key='+API_KEY+'&q='+req.params.zipcode+'&days=4&aqi=no&alerts=no', (resp) => {
     let data = '';
     resp.on('data', (chunk) => {
         data += chunk;
